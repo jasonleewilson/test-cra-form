@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <main className='p-8'>
+        <form name='contact' method='POST' data-netlify='true'>
+          <p>
+            <label>
+              Your Name: <input type='text' name='name' />
+            </label>
+          </p>
+          <p className='p-4'>
+            <label>
+              Your Email: <input type='email' name='email' />
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name='message'></textarea>
+            </label>
+          </p>
+          <p>
+            <button className='bg-red' type='submit'>
+              Send
+            </button>
+          </p>
+        </form>
+      </main>
     </div>
   );
 }
