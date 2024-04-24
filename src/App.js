@@ -5,7 +5,8 @@ function App() {
   return (
     <div className='App'>
       <main className='p-8'>
-        <form name='contact' method='POST' netlify>
+        <form name='contact' method='POST' data-netlify='true'>
+          <input type='hidden' name='contact' value='contact' />
           <p>
             <label>
               Your Name: <input type='text' name='name' />
